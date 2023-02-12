@@ -1,4 +1,4 @@
-# sql-challenge
+# SQL Challenge
 ----
 ## Data Modelling
 ----

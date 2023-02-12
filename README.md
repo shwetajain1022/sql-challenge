@@ -1,15 +1,19 @@
 # sql-challenge
+----
 ## Data Modelling
 ----
 1. Created the ER Diagram in https://app.quickdatabasediagrams.com/#/d/rLdP7i
 1. Added sql-challenge\sql-challenge\ER Diagram\ER Diagram Script.txt
 1. Added sql-challenge\sql-challenge\ER Diagram\Employee Department ER Diagram.png
-
+----
 ##Data Engineering
+----
 1. Converted hire_date and birth_date in Employee table to yyyy-mm-dd format so that they can be imported into Employee table without any issue. This is done by converting csv using pandas file(sql-challenge\sql-challenge\EmployeeCSVDateTimeTransformation.ipnby
-1. Created table creation script from quickdiagram app by analysing 6 CSVs and their data. The tables creation sql is at location sql-challenge\sql-challenge\EmployeeSQL\
-
+1. Created table creation script from quickdiagram app by analysing 6 CSVs and their data. The tables creation sql is at location sql-challenge\sql-challenge\EmployeeSQL\EmployeesSchemaCreation.sql
+----
 ##Data Analysis
+----
+Created the queries of the following statements: 
 1. List the employee number, last name, first name, sex, and salary of each employee. 
 1. List the first name, last name, and hire date for the employees who were hired in 1986. 
 1. List the manager of each department along with their department number, department name, employee number, last name, and first name. 
@@ -18,3 +22,6 @@
 1. List each employee in the Sales department, including their employee number, last name, and first name. 
 1. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name. 
 1. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name). 
+
+The queries are locacted at sql-challenge\sql-challenge\EmployeeSQL\Assignment queries.sql
+----

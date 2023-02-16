@@ -13,18 +13,16 @@ I will need to design the tables to hold the data from the CSV files, import the
 ## Data Modelling
 Reviewed the csv files and converted columns into fields in the columns for the tables
 1. titles table
-titles
----------------------
-title_id varchar(6) PK
-title varchar(200)
 | Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | titles | title_id | varchar(6) | Yes |  |  | | 
+| titles | title | varchar(200) |  |  |  | | 
 
-1. departments (fields with datatype)
------------------------
-dept_code varchar(5) Primary Key
-dept_name varchar(100)
+1. departments Table
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| departments | dept_code | varchar(5) | Yes |  |  | | 
+| departments | dept_name | varchar(100) |  |  |  | | 
 
 
 1. employee
@@ -36,6 +34,16 @@ first_name varchar(100) NULL
 last_name varchar(100) NULL
 sex varchar(1)
 hire_date Date
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| employee | emp_no | int | Yes |  |  | | 
+| employee | emp_title_id | varchar(6) |  | Yes | titles | title_id | 
+| employee | birth_date | Date |  |  |  | | 
+| employee | first_name | varchar(100) nullable |  |  |  | | 
+| employee | last_name | varchar(100) nullable |  |  |  | | 
+| employee | sex | varchar(1) |  |  |  | | 
+| employee | hire_date | Date |  |  |  | | 
+
 
 emp_no is the primary key
 emp_title_id is the foriegn key referencing titles table -> title_id field

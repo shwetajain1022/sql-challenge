@@ -8,7 +8,7 @@ departments
 dept_code varchar(5) PK
 dept_name varchar(100)
 
-Employee
+employee
 - 
 emp_no int PK
 emp_title_id varchar(6) FK - titles.title_id
@@ -21,14 +21,14 @@ hire_date Date
 dept_emp
 -
 dept_code varchar(5) PK FK >- departments.dept_code
-emp_no INT PK FK >- Employee.emp_no
+emp_no INT PK FK >- employee.emp_no
 
 salaries
 -
-emp_no int PK FK - Employee.emp_no
+emp_no int PK FK - employee.emp_no
 salary float Null
 
 dept_manager
 -
 dept_code varchar(5) PK FK >- departments.dept_code
-emp_no INT PK FK >- Employee.emp_no
+emp_no INT PK FK >- employee.emp_no

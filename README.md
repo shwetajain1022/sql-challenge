@@ -13,12 +13,14 @@ I will need to design the tables to hold the data from the CSV files, import the
 ## Data Modelling
 Reviewed the csv files and converted columns into fields in the columns for the tables
 1. titles table
+------
 | Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | titles | title_id | varchar(6) | Yes |  |  | | 
 | titles | title | varchar(200) |  |  |  | | 
 
 1. departments Table
+------
 | Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | departments | dept_code | varchar(5) | Yes |  |  | | 

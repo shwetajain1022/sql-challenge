@@ -11,6 +11,12 @@ I will need to design the tables to hold the data from the CSV files, import the
 - [Data Analysis](#Data Analysis)
 
 ## Data Modelling
+----
+1. Created the ER Diagram in https://app.quickdatabasediagrams.com after reviewing the csv files
+1. Added sql-challenge\sql-challenge\ER Diagram\ER Diagram Script.txt
+1. Added sql-challenge\sql-challenge\ER Diagram\Employee Department ER Diagram.png
+
+## Data Engineering
 Reviewed the csv files and converted columns into fields in the columns for the tables
 1. titles table
 ------
@@ -101,11 +107,7 @@ Contributors names.
 
 
 
-## Data Modelling
-----
-1. Created the ER Diagram in https://app.quickdatabasediagrams.com/#/d/rLdP7i
-1. Added sql-challenge\sql-challenge\ER Diagram\ER Diagram Script.txt
-1. Added sql-challenge\sql-challenge\ER Diagram\Employee Department ER Diagram.png
+
 ----
 ##Data Engineering
 ----

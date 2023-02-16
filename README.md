@@ -1,5 +1,73 @@
 # SQL Challenge
+
 ----
+As a new data engineer, the first major task is to do a research project about people whom the company employed during the 1980s and 1990s. All that remains of the employee database from that period are six CSV files.
+I will need to design the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. This will require to perform data modelling, data engineering, and data analysis, respectively.
+
+## Table of Contents
+
+- [Data Modelling](#Data Modelling)
+- [Data Engineering](#Data Engineering)
+- [Data Analysis](#Data Analysis)
+
+## Data Modelling
+Reviewed the csv files and converted columns into fields in the columns for the tables
+1. titles table
+titles
+---------------------
+title_id varchar(6) PK
+title varchar(200)
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| titles | title_id | varchar(6) | Yes |  |  | | 
+
+1. departments (fields with datatype)
+-----------------------
+dept_code varchar(5) Primary Key
+dept_name varchar(100)
+
+
+1. employee
+------------------------ 
+emp_no int PK
+emp_title_id varchar(6) Foreign Key to titles table -> title_id field
+birth_date Date
+first_name varchar(100) NULL
+last_name varchar(100) NULL
+sex varchar(1)
+hire_date Date
+
+emp_no is the primary key
+emp_title_id is the foriegn key referencing titles table -> title_id field
+
+
+1. dept_emp
+---------------------------------
+dept_code varchar(5) Primary Key and Foreign Key of departments table -> dept_code field
+emp_no INT Primary Key and Foreign Key of employee table -> emp_no
+
+emp_no,dept_code is a composite primary key.
+
+
+## Data Engineering
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+## Data Analysis
+Installation instructions.
+
+## Usage
+A step by step series of examples that tell you how to get a development env running.
+
+## Contributing
+Contributors names.
+
+
+
+
+
+
+
+
 ## Data Modelling
 ----
 1. Created the ER Diagram in https://app.quickdatabasediagrams.com/#/d/rLdP7i

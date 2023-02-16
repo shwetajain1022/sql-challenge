@@ -93,14 +93,21 @@ CSV Files imported in the chronological object:
 1. salaries table - salaries.csv
 1. dept_manager table - dept_manager.csv
 
-
+employee table
 ![image](https://user-images.githubusercontent.com/40103518/219365222-d3eb6300-d7a7-4e4d-8538-57782b0fd79c.png)
+-----
 
+Department table
 ![image](https://user-images.githubusercontent.com/40103518/219365386-6a15440a-f144-4142-ad2b-eadc587ca2ad.png)
+-----
 
+Dept_emp table
 ![image](https://user-images.githubusercontent.com/40103518/219365554-a0879ef7-fff0-4da9-9079-518930074e93.png)
+----
 
+Dept_Manager table
 ![image](https://user-images.githubusercontent.com/40103518/219365947-0963edb5-8d15-4d62-92ce-f9bffc5b639c.png)
+-----
 
 Salaries table
 ![image](https://user-images.githubusercontent.com/40103518/219366146-f2788c43-a432-4186-9333-3e1efe3ab8c0.png)
@@ -115,14 +122,56 @@ titles table
 Created the queries of the following statements: 
 1. List the employee number, last name, first name, sex, and salary of each employee.
 
+
+select e.emp_no,e.last_name,e.first_name,e.sex,s.salary from employee e inner join salaries s 
+on e.emp_no = s.emp_no;
+
 1. List the first name, last name, and hire date for the employees who were hired in 1986. 
 
-1. List the manager of each department along with their department number, department name, employee number, last name, and first name. 
+
+select e.emp_no,e.first_name,e.last_name,e.hire_date from employee e 
+where e.hire_date >= '1986-01-01' and  e.hire_date <= '1986-12-31';
+
+1. List the manager of each department along with their department number, department name, employee number, last name, and first name.
+
+select  d.dept_code,d.dept_name,e.emp_no,e.last_name,e.first_name from 
+dept_manager dm inner join
+employee e on dm.emp_no = e.emp_no
+inner join departments d on d.dept_code = dm.dept_code;
+
+
 1. List the department number for each employee along with that employee’s employee number, last name, first name, and department name. 
+
+select e.emp_no,e.last_name, e.first_name, de.dept_code
+from employee e inner join dept_emp de on
+e.emp_id = de.emp_id;
+
+
 1. List the first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B. 
+
+select e.emp_no, e.first_name,  e.last_name, e.sex from employee e where
+e.first_name = 'Hercules' and e.last_name like 'B%';
+
 1. List each employee in the Sales department, including their employee number, last name, and first name. 
-1. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name. 
+
+select e.emp_no, e.last_name, e.first_name from employee e
+inner join dept_emp de on e.emp_no = de.emp_no
+inner join departments d on de.dept_code = d.dept_code
+where d.dept_name = 'Sales';
+
+1. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
+
+select e.emp_no,   e.last_name, e.first_name, d.dept_name from employee e
+inner join dept_emp de on e.emp_no = de.emp_no
+inner join departments d on de.dept_code = d.dept_code
+where d.dept_name in ('Sales', 'Development');
+
+
 1. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name). 
+
+select e.last_name,count(e.last_name) from employee e
+group by e.last_name
+order by count(e.last_name) desc
 
 The queries are locacted at sql-challenge\sql-challenge\EmployeeSQL\Assignment queries.sql
 ----

@@ -19,7 +19,7 @@ CREATE TABLE "departments" (
      )
 );
 
-CREATE TABLE "Employee" (
+CREATE TABLE "employee" (
     "emp_no" int   NOT NULL,
     "emp_title_id" varchar(6)   NOT NULL,
     "birth_date" Date   NOT NULL,

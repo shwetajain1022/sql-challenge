@@ -19,7 +19,7 @@ Reviewed the csv files and converted columns into fields in the columns for the 
 | titles | title_id | varchar(6) | Yes |  |  | | 
 | titles | title | varchar(200) |  |  |  | | 
 
-1. departments Table
+1. departments table
 ------
 | Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -27,15 +27,9 @@ Reviewed the csv files and converted columns into fields in the columns for the 
 | departments | dept_name | varchar(100) |  |  |  | | 
 
 
-1. employee
+1. employee table
 ------------------------ 
-emp_no int PK
-emp_title_id varchar(6) Foreign Key to titles table -> title_id field
-birth_date Date
-first_name varchar(100) NULL
-last_name varchar(100) NULL
-sex varchar(1)
-hire_date Date
+
 | Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | employee | emp_no | int | Yes |  |  | | 
@@ -46,21 +40,50 @@ hire_date Date
 | employee | sex | varchar(1) |  |  |  | | 
 | employee | hire_date | Date |  |  |  | | 
 
-
-emp_no is the primary key
-emp_title_id is the foriegn key referencing titles table -> title_id field
-
-
-1. dept_emp
+1. dept_emp table
 ---------------------------------
-dept_code varchar(5) Primary Key and Foreign Key of departments table -> dept_code field
-emp_no INT Primary Key and Foreign Key of employee table -> emp_no
+
+
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| dept_emp | emp_no | int | Yes | Yes | employee |emp_no | 
+| dept_emp | dept_code | varchar(6) |Yes  | Yes | departments | dept_code | 
 
 emp_no,dept_code is a composite primary key.
 
+1. salaries table
+---------------------------------
+
+
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| salaries | emp_no | int | Yes | Yes | employee |emp_no | 
+| salaries | salary | float |  |  |  |  | 
+
+1. dept_manager table
+---------------------------------
+
+
+| Table Name | Column Name |  DataType |Primary Key|Foreign Key  | Foreign Key table | Foreign key firld name |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| dept_manager | emp_no | int | Yes | Yes | employee |emp_no | 
+| dept_manager | dept_code | varchar(6) |Yes  | Yes | departments | dept_code | 
+
+emp_no,dept_code is a composite primary key.
+
+----------------------------------------------------
+
+CSV Files imported in the chronological object:
+------------------------------------------------------
+1. titles table - titles.csv
+1. departments table - departments.csv
+1. employee table - employee_v1.csv
+1. dept_emp table - dept_emp.csv
+1. salaries table - salaries.csv
+1. dept_manager table - dept_manager.csv
 
 ## Data Engineering
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 
 ## Data Analysis
 Installation instructions.

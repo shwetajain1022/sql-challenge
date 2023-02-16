@@ -106,7 +106,7 @@ Dept_emp table
 ----
 
 Dept_Manager table
-![image](https://user-images.githubusercontent.com/40103518/219365947-0963edb5-8d15-4d62-92ce-f9bffc5b639c.png)
+![image](https://user-images.githubusercontent.com/40103518/219369344-8c40b547-31d1-4ae7-bbbd-c623dcda1f45.png)
 -----
 
 Salaries table

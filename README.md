@@ -14,7 +14,7 @@ I will need to design the tables to hold the data from the CSV files, import the
 ----
 1. Created the ER Diagram in https://app.quickdatabasediagrams.com after reviewing the csv files
 1. Added sql-challenge\sql-challenge\ER Diagram\ER Diagram Script.txt
-1. Added sql-challenge\sql-challenge\ER Diagram\Employee Department ER Diagram.png
+1. Added sql-challenge\sql-challenge\ER Diagram\ER Diagram.png
 
 ![image](https://user-images.githubusercontent.com/40103518/219360374-65b5963a-1940-42b2-a886-42a4b0affb89.png)
 
